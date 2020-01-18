@@ -33,7 +33,7 @@ class Printer {
         nodePrinter.printDirect({
             printer: printerConfig.printer,
             data: fileContent,
-            type: 'JPEG',
+            type: 'RAW',
             success: function(jobId) {
                 console.log('Print job queued successfully', jobId);
                 that._checkJob(printerConfig.printer, jobId, callback);

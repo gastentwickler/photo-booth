@@ -160,10 +160,29 @@
 
 			<div class="row step layout-selection">
 				<ul>
+					<!--Änderungen, um die Print Layout Vorschauen nicht mehr zu generieren, sondern statisch zu hinterlegen (gastenwickler Jan 2020-->
+					
+					<!-- alter Stand
 					{{#each config.printing.layouts}}
 						<li class="col-xs-12 col-sm-6 col-sm-6 col-lg-4" onclick="selectPrintLayout('{{this.key}}', {{this.options.width}}, {{this.options.height}})">
 							<img class="layout-image" src="layouts/{{this.key}}" />
 						</li>
+					{{/each}}
+					-->
+
+					{{#each config.printing.layouts}}
+						{{#eq this.options.generation 'canvas'}}
+							<li class="col-xs-12 col-sm-6 col-sm-6 col-lg-3" onclick="selectPrintLayout('{{this.key}}', {{this.options.width}}, {{this.options.height}})">
+							<img class="layout-image" src="layouts/{{this.key}}" />
+							</li>
+						{{/eq}}
+
+						{{#eq this.options.generation 'imagemagick'}}
+							<li class="col-xs-12 col-sm-6 col-sm-6 col-lg-4" onclick="selectPrintLayout('{{this.key}}', {{this.options.width}}, {{this.options.height}})">
+							<img class="layout-image" src="im_layouts/{{this.key}}.jpg" />
+							</li>
+						{{/eq}}
+
 					{{/each}}
 				</ul>
 			</div>

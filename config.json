@@ -1,12 +1,12 @@
 {
-	"language": "en",
+	"language": "de",
 	"init": {
-		"fullscreen": true,
+		"fullscreen": false,
 		"width": 1440,
 		"height": 900,
-		"showDevTools": false,
+		"showDevTools": true,
 		"useGPIO": false,
-		"grayscaleMode": true,
+		"grayscaleMode": false,
 		"preventScreensaver": true
 	},
 	"maxImageSize": "1500",
@@ -22,7 +22,7 @@
 	"gphoto2": {
 		"capturetarget": 1,
 		"keep": true,
-		"simulate": false
+		"simulate": true
 	},
 	"triggers": {
 		"onClick": true,
@@ -37,12 +37,102 @@
 		"contactAddressType": "email"
 	},
 	"printing": {
-		"enabled": false,
-		"simulate": false,
+		"enabled": true,
+		"simulate": true,
 		"printer": "printer-name",
 		"limitPerUser": 0,
 		"grayscale": false,
-		"layouts": []
+		"generation": "canvas",
+		"layouts": 
+		[ 
+	
+		{
+			"key": "PhotoFrame",
+			"options": {
+				"allowed": true,
+				"dpi": 300,
+				"width": 1,
+				"height": 1,
+				"imageWidth": 868,
+				"imageHeight": 577,
+				"backgroundColor": "#ffffff",
+				"spacing": {
+					"top": 50,
+					"left": 0,
+					"bottom": 8,
+					"right": 1,
+					"betweenImages": 11
+						},
+				"generation": "imagemagick"
+				}
+		} ,
+
+		{
+			"key": "2erCollage",
+			"options": {
+				"allowed": true,
+				"dpi": 300,
+				"width": 1,
+				"height": 2,
+				"imageWidth": 868,
+				"imageHeight": 577,
+				"backgroundColor": "#ffffff",
+				"spacing": {
+					"top": 50,
+					"left": 0,
+					"bottom": 8,
+					"right": 1,
+					"betweenImages": 11
+						},
+				"generation": "imagemagick"
+				}
+		} ,
+
+		{
+			"key": "4erCollage",
+			"options": {
+				"allowed": true,
+				"dpi": 300,
+				"width": 2,
+				"height": 2,
+				"imageWidth": 868,
+				"imageHeight": 577,
+				"backgroundColor": "#ffffff",
+				"spacing": {
+					"top": 50,
+					"left": 0,
+					"bottom": 8,
+					"right": 1,
+					"betweenImages": 11
+						},
+				"generation": "imagemagick"
+				}
+		} ,
+		
+		{
+			"key": "fotostreifen",
+			"options": {
+				"allowed": true,
+				"dpi": 300,
+				"width": 2,
+				"height": 3,
+				"imageWidth": 868,
+				"imageHeight": 577,
+				"backgroundColor": "#ffffff",
+				"spacing": {
+					"top": 50,
+					"left": 0,
+					"bottom": 8,
+					"right": 1,
+					"betweenImages": 11
+						},
+				"generation": "imagemagick"
+				}
+		} 
+
+
+]
+
 	},
 	"branding": {
 		"type": "text",
