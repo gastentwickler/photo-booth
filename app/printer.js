@@ -18,12 +18,14 @@ class Printer {
         }
 
         if (nodePrinter == null) {
+            console.log('Printing not enabled');
             callback(new Error('Printing not enabled'));
             return;
         }
 
         const printerError = this._checkPrinter(printerConfig.printer);
         if (printerError != null) {
+            console.log('Printer Error');
             callback(printerError);
             return;
         }

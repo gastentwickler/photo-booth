@@ -82,10 +82,8 @@ class Collage {
     
                 if (err) {
                     callback(err);
-                    console.log("zeile 85");
                 } else {
                     callback(false, webappFilepath);
-                    console.log("zeile 88");
                 }
             }
     
@@ -118,13 +116,13 @@ class Collage {
      
         if (options.generation == "imagemagick") {
 
-            this._createCollageIM(convertedFilepath, options, images, function(err) {
+            this._createCollageIM(layout, convertedFilepath, options, images, function(err) {
                 if (err) {
-                    callback(err);
                     console.log("zeile 141");
+                    callback(err);
                 } else {
-                    callback(false, convertedFilepath);
                     console.log("zeile 144");
+                    callback(false, convertedFilepath);
                 }
             }
     
@@ -175,8 +173,7 @@ class Collage {
     //Collage mit Imagemagick erstellen (Gastenwickler Jan 2020)
     _createCollageIM(layout, filePath, options, images, callback) {
 
-        console.log("imagemagick start");
-        console.log("filePath: ", filePath, "options:", options, "images: ", images );
+        console.log("imagemagick start", layout, filePath);
        
         if (layout == 'PhotoFrame') {
             console.log("PhotoFrame erstellen");

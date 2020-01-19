@@ -348,6 +348,7 @@ function goBackToPrintPhotoSelection() {
 }
 
 function printPhoto() {
+	console.log('print button gedrückt')
 	showPendingActionPage();
 
 	var printCount = getCookie('printCount');

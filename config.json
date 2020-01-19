@@ -38,8 +38,8 @@
 	},
 	"printing": {
 		"enabled": true,
-		"simulate": true,
-		"printer": "printer-name",
+		"simulate": false,
+		"printer": "Canon_SELPHY_CP1200",
 		"limitPerUser": 0,
 		"grayscale": false,
 		"generation": "canvas",
