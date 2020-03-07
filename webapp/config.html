@@ -48,7 +48,7 @@
 
 			<div class="row">
 				<div class="cell">
-					<h3>Camera Setup</h3>
+					<h4>Camera Setup</h4>
 				</div>
 			</div>
 			 
@@ -78,7 +78,7 @@
 			<!--
 			<div class="row">
 				<div class="cell">
-					<h3>Customize</h3>
+					<h4>Customize</h4>
 				</div>
 			</div>
 
@@ -101,7 +101,7 @@
 
 			<div class="row">
 				<div class="cell">
-					<h3>Image</h3>
+					<h4>Image</h4>
 				</div>
 			</div>
 
@@ -152,7 +152,7 @@
 
 			<div class="row">
 				<div class="cell">
-					<h3>Slideshow</h3>
+					<h4>Slideshow</h4>
 				</div>
 			</div>
 
@@ -191,9 +191,187 @@
 			</div>
 
 
+
 			<div class="row">
 				<div class="cell">
-					<h3>Developer</h3>
+					<h4>Printing</h4>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="cell">Printing enabled</div>
+				<div class="cell">
+					<div class="switch">
+						<label>
+							<input type="checkbox" id="printingEnabled">
+							<span class="lever"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="cell">Printing simulation</div>
+				<div class="cell">
+					<div class="switch">
+						<label>
+							<input type="checkbox" id="printingSimulation">
+							<span class="lever"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="cell">Select Printing Layouts</div>
+
+
+				<div class="cell">
+
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" id="Layout_PhotoFrame" value="1">
+						<label class="form-check-label" for="Layout_PhotoFrame">PhotoFrame</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" id="Layout_2erCollage" value="1">
+						<label class="form-check-label" for="Layout_2erCollage">2erCollage</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" id="Layout_4erCollage" value="1">
+						<label class="form-check-label" for="Layout_4erCollage">4erCollage</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" id="Layout_Fotostreifen" value="1">
+						<label class="form-check-label" for="Layout_Fotostreifen">Fotostreifen</label>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="row">
+				<div class="cell">Printing Background PhotoFrame</div>
+				<div class="cell">
+				    <div class="input-field">
+						<select  id="Background_PhotoFrame">
+							<option value="" disabled selected> Wähle den Druckhintergrund </option>
+							<option value="#000000"> Schwarz </option>
+							<option value="#FFFFFF"> Weiß </option>
+							<option value="#E0ded5"> Schlamm </option>
+							<option value="#9dad97"> Mintgrün dunkel </option>
+							<option value="#afc9b8"> Mintgrün hell </option>
+							<option value="#c7d1d4"> Eisblau </option>
+							<option value="#edc0c7"> Rosa </option>
+						</select>
+
+						<label> Druckhintergrund wählen		</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="cell">Printing Background 2erCollage</div>
+				<div class="cell">
+				    <div class="input-field">
+						<select  id="Background_2erCollage">
+							<option value="" disabled selected> Wähle den Druckhintergrund </option>
+							<option value="#000000"> Schwarz </option>
+							<option value="#FFFFFF"> Weiß </option>
+							<option value="#E0ded5"> Schlamm </option>
+							<option value="#9dad97"> Mintgrün dunkel </option>
+							<option value="#afc9b8"> Mintgrün hell </option>
+							<option value="#c7d1d4"> Eisblau </option>
+							<option value="#edc0c7"> Rosa </option>
+						</select>
+
+						<label> Druckhintergrund wählen		</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="cell">Printing Background 4erCollage</div>
+				<div class="cell">
+				    <div class="input-field">
+						<select  id="Background_4erCollage">
+							<option value="" disabled selected> Wähle den Druckhintergrund </option>
+							<option value="#000000"> Schwarz </option>
+							<option value="#FFFFFF"> Weiß </option>
+							<option value="#E0ded5"> Schlamm </option>
+							<option value="#9dad97"> Mintgrün dunkel </option>
+							<option value="#afc9b8"> Mintgrün hell </option>
+							<option value="#c7d1d4"> Eisblau </option>
+							<option value="#edc0c7"> Rosa </option>
+						</select>
+
+						<label> Druckhintergrund wählen		</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="cell">Printing Background Fotostreifen</div>
+				<div class="cell">
+				    <div class="input-field">
+						<select id="Background_Fotostreifen">
+							<option value="default" disabled selected> Wähle den Druckhintergrund </option>
+							<option value="#000000"> Schwarz </option>
+							<option value="#FFFFFF"> Weiß </option>
+							<option value="#E0ded5"> Schlamm </option>
+							<option value="#9dad97"> Mintgrün dunkel </option>
+							<option value="#afc9b8"> Mintgrün hell </option>
+							<option value="#c7d1d4"> Eisblau </option>
+							<option value="#edc0c7"> Rosa </option>
+						</select>
+
+						<label> Druckhintergrund wählen		</label>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cell">Drucktext Zeile 1</div>
+				<div class="cell">
+				    <div class="input-field">
+						<input id="Drucktext_Zeile_1" type="text" data-length="25">
+						<label for="Drucktext_Zeile_1"> Drucktext Zeile 1   </label>	
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="cell">Drucktext Zeile 2</div>
+				<div class="cell">
+				    <div class="input-field">
+						<input id="Drucktext_Zeile_2" type="text" data-length="25">
+						<label for="Drucktext_Zeile_2"> Drucktext Zeile 2   </label>	
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cell">Textfarbe</div>
+				<div class="cell">
+				    <div class="input-field">
+						<select  id="TextColor">
+							<option value="" disabled selected> Textfarbe wählen </option>
+							<option value="#000000"> Schwarz </option>
+							<option value="#FFFFFF"> Weiß </option>
+						</select>
+
+						<label> Textfarbe wählen		</label>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="row">
+				<div class="cell">
+					<h4>Developer</h4>
 				</div>
 			</div>
 
@@ -248,7 +426,7 @@
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script src="js/materialize.min.js"></script>
 
 	<script>
 
@@ -289,6 +467,33 @@
 				$('#showDevTools').prop('checked', config.init.showDevTools);
 				$('#useGPIO').prop('checked', config.init.useGPIO);
 				$('#fullscreen').prop('checked', config.init.fullscreen);
+
+
+				//Erweiterung gastentwickler 02/2020
+
+				$('#printingEnabled').prop('checked', config.printing.enabled);
+				$('#printingSimulation').prop('checked', config.printing.simulate);
+				$('#Layout_PhotoFrame').prop('checked', config.printing.layouts[0].enabled);
+				$('#Layout_2erCollage').prop('checked', config.printing.layouts[1].enabled);
+				$('#Layout_4erCollage').prop('checked', config.printing.layouts[2].enabled);
+				$('#Layout_Fotostreifen').prop('checked', config.printing.layouts[3].enabled);
+
+				$('#Background_PhotoFrame').val(config.printing.layouts[0].options.backgroundColor);
+				$('#Background_2erCollage').val(config.printing.layouts[1].options.backgroundColor);
+				$('#Background_4erCollage').val(config.printing.layouts[2].options.backgroundColor);
+				$('#Background_Fotostreifen').val(config.printing.layouts[3].options.backgroundColor);
+
+				$('#Drucktext_Zeile_1').val(config.printing.layouts[0].options.text1);
+				$('#Drucktext_Zeile_2').val(config.printing.layouts[0].options.text2);
+
+				$('#TextColor').val(config.printing.layouts[0].options.textcolor);
+
+
+				$(document).ready(function() {
+   						 $('select').material_select();
+  					});
+
+
 			} else {
 				console.log('Server returned undefined config file');
 			}
@@ -311,6 +516,36 @@
 				config.init.showDevTools = $('#showDevTools').prop('checked');
 				config.init.useGPIO = $('#useGPIO').prop('checked');
 				config.init.fullscreen = $('#fullscreen').prop('checked');
+
+				//Erweiterung gastentwickler 02/2020
+				config.printing.enabled = $('#printingEnabled').prop('checked');
+				config.printing.simulate = $('#printingSimulation').prop('checked');
+				config.printing.layouts[0].enabled = $('#Layout_PhotoFrame').prop('checked');
+				config.printing.layouts[1].enabled = $('#Layout_2erCollage').prop('checked');
+				config.printing.layouts[2].enabled = $('#Layout_4erCollage').prop('checked');
+				config.printing.layouts[3].enabled = $('#Layout_Fotostreifen').prop('checked');
+
+				config.printing.layouts[0].options.backgroundColor=$('#Background_PhotoFrame').val();
+				config.printing.layouts[1].options.backgroundColor=$('#Background_2erCollage').val();
+				config.printing.layouts[2].options.backgroundColor=$('#Background_4erCollage').val();
+				config.printing.layouts[3].options.backgroundColor=$('#Background_Fotostreifen').val();
+
+				config.printing.layouts[0].options.text1=$('#Drucktext_Zeile_1').val();
+				config.printing.layouts[1].options.text1=$('#Drucktext_Zeile_1').val();
+				config.printing.layouts[2].options.text1=$('#Drucktext_Zeile_1').val();
+				config.printing.layouts[3].options.text1=$('#Drucktext_Zeile_1').val();
+
+				config.printing.layouts[0].options.text2=$('#Drucktext_Zeile_2').val();
+				config.printing.layouts[1].options.text2=$('#Drucktext_Zeile_2').val();
+				config.printing.layouts[2].options.text2=$('#Drucktext_Zeile_2').val();
+				config.printing.layouts[3].options.text2=$('#Drucktext_Zeile_2').val();
+
+				config.printing.layouts[0].options.textcolor=$('#TextColor').val();
+				config.printing.layouts[1].options.textcolor=$('#TextColor').val();
+				config.printing.layouts[2].options.textcolor=$('#TextColor').val();
+				config.printing.layouts[3].options.textcolor=$('#TextColor').val();
+
+
 
 				socket.emit('set_config', {password: getCookie('password'), config: config});
 			} else if (option) {

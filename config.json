@@ -26,7 +26,11 @@
 	},
 	"triggers": {
 		"onClick": true,
-		"customKeys": ["PageUp","PageDown","b"]
+		"customKeys": [
+			"PageUp",
+			"PageDown",
+			"b"
+		]
 	},
 	"content_dir": "../content",
 	"webapp": {
@@ -34,109 +38,119 @@
 		"maxDownloadImageSize": 800,
 		"gifDelay": 1000,
 		"enableRemoteRelease": true,
-		"contactAddressType": "email"
+		"contactAddressType": "none"
 	},
 	"printing": {
 		"enabled": true,
-		"simulate": false,
+		"simulate": true,
 		"printer": "Canon_SELPHY_CP1200",
 		"limitPerUser": 0,
 		"grayscale": false,
 		"generation": "canvas",
-		"layouts": 
-		[ 
-	
-		{
-			"key": "PhotoFrame",
-			"options": {
-				"allowed": true,
-				"dpi": 300,
-				"width": 1,
-				"height": 1,
-				"imageWidth": 868,
-				"imageHeight": 577,
-				"backgroundColor": "#ffffff",
-				"spacing": {
-					"top": 50,
-					"left": 0,
-					"bottom": 8,
-					"right": 1,
-					"betweenImages": 11
-						},
-				"generation": "imagemagick"
+		"text1": "aaa",
+		"text2": "bbb",
+		"layouts": [
+			{
+				"key": "PhotoFrame",
+				"enabled": true,
+				"options": {
+					"allowed": true,
+					"dpi": 300,
+					"width": 1,
+					"height": 1,
+					"imageWidth": 868,
+					"imageHeight": 577,
+					"backgroundColor": "#afc9b8",
+					"spacing": {
+						"top": 50,
+						"left": 0,
+						"bottom": 8,
+						"right": 1,
+						"betweenImages": 11
+					},
+					"generation": "imagemagick",
+					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
+					"text2": "12.34.5678",
+					"textcolor": "#FFFFFF"
 				}
-		} ,
-
-		{
-			"key": "2erCollage",
-			"options": {
-				"allowed": true,
-				"dpi": 300,
-				"width": 1,
-				"height": 2,
-				"imageWidth": 868,
-				"imageHeight": 577,
-				"backgroundColor": "#ffffff",
-				"spacing": {
-					"top": 50,
-					"left": 0,
-					"bottom": 8,
-					"right": 1,
-					"betweenImages": 11
-						},
-				"generation": "imagemagick"
+			},
+			{
+				"key": "2erCollage",
+				"enabled": true,
+				"options": {
+					"allowed": true,
+					"dpi": 300,
+					"width": 1,
+					"height": 2,
+					"imageWidth": 868,
+					"imageHeight": 577,
+					"backgroundColor": "#c7d1d4",
+					"spacing": {
+						"top": 50,
+						"left": 0,
+						"bottom": 8,
+						"right": 1,
+						"betweenImages": 11
+					},
+					"generation": "imagemagick",
+					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
+					"text2": "12.34.5678",
+					"textcolor": "#FFFFFF"
 				}
-		} ,
-
-		{
-			"key": "4erCollage",
-			"options": {
-				"allowed": true,
-				"dpi": 300,
-				"width": 2,
-				"height": 2,
-				"imageWidth": 868,
-				"imageHeight": 577,
-				"backgroundColor": "#ffffff",
-				"spacing": {
-					"top": 50,
-					"left": 0,
-					"bottom": 8,
-					"right": 1,
-					"betweenImages": 11
-						},
-				"generation": "imagemagick"
+			},
+			{
+				"key": "4erCollage",
+				"enabled": true,
+				"options": {
+					"allowed": true,
+					"dpi": 300,
+					"width": 2,
+					"height": 2,
+					"imageWidth": 868,
+					"imageHeight": 577,
+					"backgroundColor": "#edc0c7",
+					"spacing": {
+						"top": 50,
+						"left": 0,
+						"bottom": 8,
+						"right": 1,
+						"betweenImages": 11
+					},
+					"generation": "imagemagick",
+					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
+					"text2": "12.34.5678",
+					"textcolor": "#FFFFFF"
 				}
-		} ,
-		
-		{
-			"key": "fotostreifen",
-			"options": {
-				"allowed": true,
-				"dpi": 300,
-				"width": 2,
-				"height": 3,
-				"imageWidth": 868,
-				"imageHeight": 577,
-				"backgroundColor": "#ffffff",
-				"spacing": {
-					"top": 50,
-					"left": 0,
-					"bottom": 8,
-					"right": 1,
-					"betweenImages": 11
-						},
-				"generation": "imagemagick"
+			},
+			{
+				"key": "fotostreifen",
+				"enabled": true,
+				"options": {
+					"allowed": true,
+					"dpi": 300,
+					"width": 2,
+					"height": 3,
+					"imageWidth": 868,
+					"imageHeight": 577,
+					"backgroundColor": "#9dad97",
+					"spacing": {
+						"top": 50,
+						"left": 0,
+						"bottom": 8,
+						"right": 1,
+						"betweenImages": 11
+					},
+					"generation": "imagemagick",
+					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
+					"text2": "12.34.5678",
+					"textcolor": "#FFFFFF"
 				}
-		} 
-
-
-]
-
+			}
+		]
 	},
 	"branding": {
 		"type": "text",
-		"content": "<div style='font-size: 1.2em; padding-left: 25px;'><i class='fa fa-wifi' aria-hidden='true' style='font-size: 2.5em;'></i> <b style='font-size: 2em; padding-left: 15px;'>photo-booth</b><br /><p>Log into wifi, browse to <b style='padding: 0 5px;'>photo.app</b> and download your photos!</p></div>",
+		"content": "<div style='font-size: 1.4em; padding-left: 25px;'><i class='fa fa-wifi' aria-hidden='true' style='font-size: 2.0em;'></i> <b style='font-size: 1.8em; padding-left: 15px;'>photo-booth</b><br /><p>Zum Drucken oder Bilder herunterladen das WLAN fotobox auswählen, und mit dem Browser die Seite <b style='padding: 0 5px;'>foto.box</b> aufrufen! </p></div>",
 		"position": "bottomleft"
 	},
 	"flash": {

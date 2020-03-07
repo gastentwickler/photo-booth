@@ -281,11 +281,9 @@ io.on('connection', function(socket){
 	});
 
 	socket.on('print', function(layout, images, printCount, password) {
-		console.log('zeile 284', layout, printCount);
 		printCount = printCount == null ? 0 : parseInt(printCount);
 		if (printCount >= utils.getConfig().printing.limitPerUser && utils.getConfig().printing.limitPerUser > 0 && !passwordIsValid(password)) {
 			io.to(socket.id).emit('print_error', 'print_limit_exceeded');
-			console.log('288');
 			return;
 		}
 

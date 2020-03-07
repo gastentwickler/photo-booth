@@ -145,11 +145,11 @@
 					<p class="step preview">{{ i18n 'print-dialog.preview' }}</p>
 
 					<p class="grey darken-3">
+						<button class="btn btn-default" onclick="hidePrintPage()">{{ i18n 'print-dialog.close' }}</button>
 						<button class="btn btn-default step photo-selection" onclick="goBackToPrintLayoutSelection()">{{ i18n 'print-dialog.back-to-layout-selection' }}</button>
 						<button class="btn btn-primary step photo-selection" onclick="goToPrintPreview()">{{ i18n 'print-dialog.continue' }}</button>
 						<button class="btn btn-default step preview" onclick="goBackToPrintPhotoSelection()">{{ i18n 'print-dialog.back-to-photo-selection' }}</button>
 						<button class="btn btn-primary step preview" onclick="printPhoto()">{{ i18n 'print-dialog.print' }}</button>
-						<button class="btn btn-default" onclick="hidePrintPage()">{{ i18n 'print-dialog.close' }}</button>
 					</p>
 
 					<div class="close-button">
@@ -171,16 +171,21 @@
 					-->
 
 					{{#each config.printing.layouts}}
-						{{#eq this.options.generation 'canvas'}}
-							<li class="col-xs-12 col-sm-6 col-sm-6 col-lg-3" onclick="selectPrintLayout('{{this.key}}', {{this.options.width}}, {{this.options.height}})">
-							<img class="layout-image" src="layouts/{{this.key}}" />
-							</li>
-						{{/eq}}
 
-						{{#eq this.options.generation 'imagemagick'}}
-							<li class="col-xs-12 col-sm-6 col-sm-6 col-lg-4" onclick="selectPrintLayout('{{this.key}}', {{this.options.width}}, {{this.options.height}})">
-							<img class="layout-image" src="im_layouts/{{this.key}}.jpg" />
-							</li>
+						{{#eq this.enabled true}}
+
+							{{#eq this.options.generation 'canvas'}}
+								<li class="col-xs-12 col-sm-6 col-sm-6 col-lg-3" onclick="selectPrintLayout('{{this.key}}', {{this.options.width}}, {{this.options.height}})">
+								<img class="layout-image" src="layouts/{{this.key}}" />
+								</li>
+							{{/eq}}
+
+							{{#eq this.options.generation 'imagemagick'}}
+								<li class="col-xs-12 col-sm-6 col-sm-6 col-lg-4" onclick="selectPrintLayout('{{this.key}}', {{this.options.width}}, {{this.options.height}})">
+								<img class="layout-image" src="im_layouts/{{this.key}}.jpg" />
+								</li>
+							{{/eq}}
+
 						{{/eq}}
 
 					{{/each}}

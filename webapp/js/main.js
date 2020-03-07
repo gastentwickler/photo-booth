@@ -273,6 +273,8 @@ function openPrintPage(limitPerUser) {
 
 	layout = '';
 	selectedPhotos = [];
+	widt = 1;
+	heigh = 1;
 
 	showPrintStep('layout-selection');
 	showPage('print-page');
@@ -282,9 +284,11 @@ function hidePrintPage() {
 	showPage();
 }
 
-function selectPrintLayout(layoutName, width = 1, height = 1) {
+//function selectPrintLayout(layoutName, width = 1, height = 1) {
+function selectPrintLayout(layoutName, width, height) {	
 	layout = layoutName;
-
+	widt = width;
+	heigh = height;
 	printPage.find('.count-selected').text(0);
 	printPage.find('.count-total').text(width * height);
 
@@ -323,7 +327,9 @@ function selectPrintPhoto() {
 	printPage.find('.count-selected').text(selectedPhotos.length);
 	var continueButton = printPage.find('.step.photo-selection.btn-primary');
 
-	if (selectedPhotos.length > 0) {
+	console.log(widt);
+//	if (selectedPhotos.length > 0) {
+	if (selectedPhotos.length == widt * heigh) {
 		continueButton.show();
 	} else {
 		continueButton.hide();

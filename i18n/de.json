@@ -29,8 +29,9 @@
     },
     "print-dialog": {
         "title": "Drucken",
-        "layout-selection": "Bitte wähle die Vorlage aus.",
-        "photo-selection": "Bitte wähle die die Bilder aus, die du drucken möchtest. Es muss mindestens ein Bild ausgewählt sein. Es können weniger oder mehr Bilder ausgewählt werden, als die Vorlage unterstützt. Wenn weniger Bilder ausgewählt wurden, werden die entsprechenden Platzhalter nicht ersetzt und wenn zu viele ausgewählt wurden, werden nur die ersten gedruckt.",
+        "layout-selection": "Bitte wähle das Drucklayout aus.",
+        "photo-selection": "Bitte wähle die die Bilder aus, die du drucken möchtest. Die Anzahl der gewählten Bilder muss zum Drucklayout passen.",
+        "photo-selection-old": "Bitte wähle die die Bilder aus, die du drucken möchtest. Es muss mindestens ein Bild ausgewählt sein. Es können weniger oder mehr Bilder ausgewählt werden, als die Vorlage unterstützt. Wenn weniger Bilder ausgewählt wurden, werden die entsprechenden Platzhalter nicht ersetzt und wenn zu viele ausgewählt wurden, werden nur die ersten gedruckt.",
         "photo-selection-count": "Anzahl gewählte Bilder",
         "preview": "Das nachfolgende Bild wird gedruckt.",
         "continue": "Vorschau anzeigen",

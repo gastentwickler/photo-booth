@@ -173,15 +173,41 @@ class Collage {
     //Collage mit Imagemagick erstellen (Gastenwickler Jan 2020)
     _createCollageIM(layout, filePath, options, images, callback) {
 
-        console.log("imagemagick start", layout, filePath);
-       
+        console.log("imagemagick start", layout, options, filePath);
+        let rotate = 0;
+        
+        if (filePath.includes('hq')) {
+            rotate=90;
+        }
+
+        // if (layout == 'PhotoFrame') {
+        //     console.log("PhotoFrame erstellen");
+      
+        //     im.convert(['-size', '1772x1181', 'xc:black', 
+        //                 '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1658x1131+0+0', '\)', '-geometry', '+57+25', '-composite', 
+        //                 '\(', images[0], '-resize', '1588x1058', '-crop', '1588x920+0+25', '\)', '-geometry', '+92+60', '-composite', 
+        //                 '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+460', 'Hochzeit Carmen & Mario', 
+        //                 '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+530', '28.09.2020', filePath], 
+                           
+        //                  function(error, stdout){
+        //                     if (error) {
+        //                         callback(error);} 
+        //                     else {callback(false);}
+        //                   }
+        //                );
+        // }
+
+
         if (layout == 'PhotoFrame') {
             console.log("PhotoFrame erstellen");
       
-            im.convert(['-size', '1772x1181', 'xc:gray', '\(', images[0], '-resize', '1632x1088', '-crop', '1632x918+0+34', '\)', '-geometry', '+70+70', '-composite', 
-                        '-fill', 'white', '-stroke', 'gray', '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+480', 'Mareike & Sebastian', 
-                        '-fill', 'white', '-stroke', 'gray', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+540', '28.09.2020', filePath], 
-               
+            im.convert(['-size', '1772x1181', 'xc:black', 
+                        '-fill', options.backgroundColor, '-stroke', 'white', '-draw', 'rectangle 57,25 1715,1156',
+                    //  '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1658x1131+0+0', '\)', '-geometry', '+57+25', '-composite', 
+                        '\(', images[0], '-resize', '1588x1058', '-crop', '1588x920+0+25', '\)', '-geometry', '+92+60', '-composite', 
+                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+460', options.text1, 
+                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+530', options.text2, filePath], 
+                           
                          function(error, stdout){
                             if (error) {
                                 callback(error);} 
@@ -193,11 +219,13 @@ class Collage {
         if (layout == '2erCollage') {
             console.log("2erCollage collage erstellen");
             
-            im.convert(['-size', '1181x1772', 'xc:gray', 
-                        '\(', images[0], '-resize', '1100x730', '\)', '-geometry', '+35+55', '-composite', 
-                        '\(', images[1], '-resize', '1100x730', '\)', '-geometry', '+35+820', '-composite', 
-                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+770', 'Mareike & Sebastian', 
-                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+840', '28.09.2020', filePath], 
+            im.convert(['-size', '1181x1772', 'xc:black', 
+                        '-fill', options.backgroundColor, '-stroke', 'white', '-draw', 'rectangle 25,57 1156, 1715',
+                    //  '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1131x1658+0+0', '\)', '-geometry', '+25+57', '-composite', 
+                        '\(', images[0], '-resize', '1051x700', '\)', '-geometry', '+65+97', '-composite', 
+                        '\(', images[1], '-resize', '1051x700', '\)', '-geometry', '+65+837', '-composite', 
+                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+720', options.text1, 
+                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+790', options.text2, '-rotate', rotate, filePath], 
                
                          function(error, stdout){
                             if (error) {
@@ -210,14 +238,16 @@ class Collage {
 
         if (layout == '4erCollage') {
             console.log("4erCollage collage erstellen");
-
-            im.convert(['-size', '1772x1181', 'xc:gray', 
-                        '\(', images[0], '-resize', '797x531', '-crop', '797x448+0+40', '\)', '-geometry', '+59+39', '-composite', 
-                        '\(', images[1], '-resize', '797x531', '-crop', '797x448+0+40', '\)', '-geometry', '+915+39', '-composite', 
-                        '\(', images[2], '-resize', '797x531', '-crop', '797x448+0+40', '\)', '-geometry', '+59+550', '-composite', 
-                        '\(', images[3], '-resize', '797x531', '-crop', '797x448+0+40', '\)', '-geometry', '+915+550', '-composite', 
-                        '-fill', 'white', '-stroke', 'gray', '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+490', '50. Geburtstag Onkel Jürgen', 
-                        '-fill', 'white', '-stroke', 'gray', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+550', 'Partytime 28.09.2020', filePath], 
+               
+            im.convert(['-size', '1772x1181', 'xc:black', 
+                        '-fill', options.backgroundColor, '-stroke', 'white', '-draw', 'rectangle 57,25 1715,1156',
+                    //  '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1658x1131+0+0', '\)', '-geometry', '+57+25', '-composite', 
+                        '\(', images[0], '-resize', '765x510', '-crop', '765x430+0+20', '\)', '-geometry', '+97+65', '-composite', 
+                        '\(', images[1], '-resize', '765x510', '-crop', '765x430+0+20', '\)', '-geometry', '+902+65', '-composite', 
+                        '\(', images[2], '-resize', '765x510', '-crop', '765x430+0+20', '\)', '-geometry', '+97+535', '-composite', 
+                        '\(', images[3], '-resize', '765x510', '-crop', '765x430+0+20', '\)', '-geometry', '+902+535', '-composite', 
+                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+445', options.text1, 
+                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+515', options.text2, filePath], 
                
                          function(error, stdout){
                             if (error) {
@@ -230,19 +260,21 @@ class Collage {
         if (layout == 'fotostreifen') {
             console.log("fotostreifen collage erstellen");
 
-            im.convert(['-size', '1181x1772', 'xc:gray', 
-            '\(', images[0], '-resize', '597x398', '-crop', '520x398+38+0', '\)', '-geometry', '+35+90', '-composite',
-            '\(', images[1], '-resize', '597x398', '-crop', '520x398+38+0', '\)', '-geometry', '+35+578', '-composite', 
-            '\(', images[2], '-resize', '597x398', '-crop', '520x398+38+0', '\)', '-geometry', '+35+1066', '-composite', 
-            '\(', images[3], '-resize', '597x398', '-crop', '520x398+38+0', '\)', '-geometry', '+625+90', '-composite', 
-            '\(', images[4], '-resize', '597x398', '-crop', '520x398+38+0', '\)', '-geometry', '+625+578', '-composite', 
-            '\(', images[5], '-resize', '597x398', '-crop', '520x398+38+0', '\)', '-geometry', '+625+1066', '-composite', 
+            im.convert(['-size', '1181x1772', 'xc:black', 
+            '-fill', options.backgroundColor, '-stroke', 'white', '-draw', 'rectangle 25,57 1156, 1715',
+        //  '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1131x1658+0+0', '\)', '-geometry', '+25+57', '-composite', 
+            '\(', images[0], '-resize', '567x378', '-crop', '505x378+31+0', '\)', '-geometry', '+55+150', '-composite',
+            '\(', images[1], '-resize', '567x378', '-crop', '505x378+31+0', '\)', '-geometry', '+55+588', '-composite', 
+            '\(', images[2], '-resize', '567x378', '-crop', '505x378+31+0', '\)', '-geometry', '+55+1026', '-composite', 
+            '\(', images[3], '-resize', '567x378', '-crop', '505x378+31+0', '\)', '-geometry', '+620+150', '-composite', 
+            '\(', images[4], '-resize', '567x378', '-crop', '505x378+31+0', '\)', '-geometry', '+620+588', '-composite', 
+            '\(', images[5], '-resize', '567x378', '-crop', '505x378+31+0', '\)', '-geometry', '+620+1026', '-composite', 
  
-            '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '-300+720', '50. Geburtstag Onkel Jürgen', 
-            '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '30', '-gravity', 'center', '-annotate', '-300+790', 'Partytime 28.09.2020', 
-            '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+300+720', '50. Geburtstag Onkel Jürgen', 
-            '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '30', '-gravity', 'center', '-annotate', '+300+790', 'Partytime 28.09.2020', 
-            filePath], 
+            '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '-282+700', options.text1, 
+            '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '-282+760', options.text2, 
+            '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '+282+700', options.text1, 
+            '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '+282+760', options.text2, 
+            '-rotate', rotate, filePath], 
 
              function(error, stdout){
                 if (error) {
