@@ -244,6 +244,10 @@
 						<input class="form-check-input" type="checkbox" id="Layout_Fotostreifen" value="1">
 						<label class="form-check-label" for="Layout_Fotostreifen">Fotostreifen</label>
 					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" id="Layout_Fotostreifen2" value="1">
+						<label class="form-check-label" for="Layout_Fotostreifen2">Fotostreifen2</label>
+					</div>
 				</div>
 			</div>
 
@@ -322,6 +326,117 @@
 							<option value="#afc9b8"> Mintgrün hell </option>
 							<option value="#c7d1d4"> Eisblau </option>
 							<option value="#edc0c7"> Rosa </option>
+						</select>
+
+						<label> Druckhintergrund wählen		</label>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cell">Printing Background Fotostreifen 2 </div>
+				<div class="cell">
+				    <div class="input-field">
+						<select id="Background_Fotostreifen2">
+							<option value="default" disabled selected> Wähle den Druckhintergrund </option>
+							<option value="#000000"> Schwarz </option>
+							<option value="#FFFFFF"> Weiß </option>
+							<option value="#E0ded5"> Schlamm </option>
+							<option value="#9dad97"> Mintgrün dunkel </option>
+							<option value="#afc9b8"> Mintgrün hell </option>
+							<option value="#c7d1d4"> Eisblau </option>
+							<option value="#edc0c7"> Rosa </option>
+						</select>
+
+						<label> Druckhintergrund wählen		</label>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cell">Printing Color Modus Photo Frame </div>
+				<div class="cell">
+				    <div class="input-field">
+						<select id="Print_Color_PhotoFrame">
+							<option value="default" disabled selected> Wähle den Farbmodus </option>
+							<option value="CMY"> CMY </option>
+							<option value="RBG"> RBG </option>
+							<option value="Gray"> Graustufen </option>
+
+						</select>
+
+						<label> Druckhintergrund wählen		</label>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cell">Printing Color Modus 2erCollage </div>
+				<div class="cell">
+				    <div class="input-field">
+						<select id="Print_Color_2erCollage">
+							<option value="default" disabled selected> Wähle den Farbmodus </option>
+							<option value="CMY"> CMY </option>
+							<option value="RBG"> RBG </option>
+							<option value="Gray"> Graustufen </option>
+
+						</select>
+
+						<label> Druckhintergrund wählen		</label>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cell">Printing Color Modus 4erCollage </div>
+				<div class="cell">
+				    <div class="input-field">
+						<select id="Print_Color_4erCollage">
+							<option value="default" disabled selected> Wähle den Farbmodus </option>
+							<option value="CMY"> CMY </option>
+							<option value="RBG"> RBG </option>
+							<option value="Gray"> Graustufen </option>
+
+						</select>
+
+						<label> Druckhintergrund wählen		</label>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cell">Printing Color Modus Fotostreifen </div>
+				<div class="cell">
+				    <div class="input-field">
+						<select id="Print_Color_Fotostreifen">
+							<option value="default" disabled selected> Wähle den Farbmodus </option>
+							<option value="CMY"> CMY </option>
+							<option value="RBG"> RBG </option>
+							<option value="Gray"> Graustufen </option>
+
+						</select>
+
+						<label> Druckhintergrund wählen		</label>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cell">Printing Color Modus Fotostreifen2 </div>
+				<div class="cell">
+				    <div class="input-field">
+						<select id="Print_Color_Fotostreifen2">
+							<option value="default" disabled selected> Wähle den Farbmodus </option>
+							<option value="CMY"> CMY </option>
+							<option value="RBG"> RBG </option>
+							<option value="Gray"> Graustufen </option>
+
 						</select>
 
 						<label> Druckhintergrund wählen		</label>
@@ -477,16 +592,25 @@
 				$('#Layout_2erCollage').prop('checked', config.printing.layouts[1].enabled);
 				$('#Layout_4erCollage').prop('checked', config.printing.layouts[2].enabled);
 				$('#Layout_Fotostreifen').prop('checked', config.printing.layouts[3].enabled);
+				$('#Layout_Fotostreifen2').prop('checked', config.printing.layouts[4].enabled);
 
 				$('#Background_PhotoFrame').val(config.printing.layouts[0].options.backgroundColor);
 				$('#Background_2erCollage').val(config.printing.layouts[1].options.backgroundColor);
 				$('#Background_4erCollage').val(config.printing.layouts[2].options.backgroundColor);
 				$('#Background_Fotostreifen').val(config.printing.layouts[3].options.backgroundColor);
+				$('#Background_Fotostreifen2').val(config.printing.layouts[4].options.backgroundColor);
 
 				$('#Drucktext_Zeile_1').val(config.printing.layouts[0].options.text1);
 				$('#Drucktext_Zeile_2').val(config.printing.layouts[0].options.text2);
 
 				$('#TextColor').val(config.printing.layouts[0].options.textcolor);
+
+				$('#Print_Color_PhotoFrame').val(config.printing.layouts[0].options.colorspace);
+				$('#Print_Color_2erCollage').val(config.printing.layouts[1].options.colorspace);
+				$('#Print_Color_4erCollage').val(config.printing.layouts[2].options.colorspace);
+				$('#Print_Color_Fotostreifen').val(config.printing.layouts[3].options.colorspace);
+				$('#Print_Color_Fotostreifen2').val(config.printing.layouts[4].options.colorspace);
+				
 
 
 				$(document).ready(function() {
@@ -524,28 +648,37 @@
 				config.printing.layouts[1].enabled = $('#Layout_2erCollage').prop('checked');
 				config.printing.layouts[2].enabled = $('#Layout_4erCollage').prop('checked');
 				config.printing.layouts[3].enabled = $('#Layout_Fotostreifen').prop('checked');
+				config.printing.layouts[4].enabled = $('#Layout_Fotostreifen2').prop('checked');
 
 				config.printing.layouts[0].options.backgroundColor=$('#Background_PhotoFrame').val();
 				config.printing.layouts[1].options.backgroundColor=$('#Background_2erCollage').val();
 				config.printing.layouts[2].options.backgroundColor=$('#Background_4erCollage').val();
 				config.printing.layouts[3].options.backgroundColor=$('#Background_Fotostreifen').val();
+				config.printing.layouts[4].options.backgroundColor=$('#Background_Fotostreifen2').val();
 
 				config.printing.layouts[0].options.text1=$('#Drucktext_Zeile_1').val();
 				config.printing.layouts[1].options.text1=$('#Drucktext_Zeile_1').val();
 				config.printing.layouts[2].options.text1=$('#Drucktext_Zeile_1').val();
 				config.printing.layouts[3].options.text1=$('#Drucktext_Zeile_1').val();
+				config.printing.layouts[4].options.text1=$('#Drucktext_Zeile_1').val();
 
 				config.printing.layouts[0].options.text2=$('#Drucktext_Zeile_2').val();
 				config.printing.layouts[1].options.text2=$('#Drucktext_Zeile_2').val();
 				config.printing.layouts[2].options.text2=$('#Drucktext_Zeile_2').val();
 				config.printing.layouts[3].options.text2=$('#Drucktext_Zeile_2').val();
+				config.printing.layouts[4].options.text2=$('#Drucktext_Zeile_2').val();
 
 				config.printing.layouts[0].options.textcolor=$('#TextColor').val();
 				config.printing.layouts[1].options.textcolor=$('#TextColor').val();
 				config.printing.layouts[2].options.textcolor=$('#TextColor').val();
 				config.printing.layouts[3].options.textcolor=$('#TextColor').val();
+				config.printing.layouts[4].options.textcolor=$('#TextColor').val();
 
-
+				config.printing.layouts[0].options.colorspace=$('#Print_Color_PhotoFrame').val();
+				config.printing.layouts[1].options.colorspace=$('#Print_Color_2erCollage').val();
+				config.printing.layouts[2].options.colorspace=$('#Print_Color_4erCollage').val();
+				config.printing.layouts[3].options.colorspace=$('#Print_Color_Fotostreifen').val();
+				config.printing.layouts[4].options.colorspace=$('#Print_Color_Fotostreifen2').val();
 
 				socket.emit('set_config', {password: getCookie('password'), config: config});
 			} else if (option) {

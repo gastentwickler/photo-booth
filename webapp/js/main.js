@@ -309,6 +309,7 @@ function selectPrintLayout(layoutName, width, height) {
 	}
 
 	showPrintStep('photo-selection');
+	window.scrollTo(0,0);
 }
 
 function selectPrintPhoto() {

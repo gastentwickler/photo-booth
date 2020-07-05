@@ -71,7 +71,8 @@
 					"generation": "imagemagick",
 					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
 					"text2": "12.34.5678",
-					"textcolor": "#FFFFFF"
+					"textcolor": "#FFFFFF",
+					"colorspace": "Gray"
 				}
 			},
 			{
@@ -95,7 +96,8 @@
 					"generation": "imagemagick",
 					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
 					"text2": "12.34.5678",
-					"textcolor": "#FFFFFF"
+					"textcolor": "#FFFFFF",
+					"colorspace": "Gray"
 				}
 			},
 			{
@@ -119,7 +121,8 @@
 					"generation": "imagemagick",
 					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
 					"text2": "12.34.5678",
-					"textcolor": "#FFFFFF"
+					"textcolor": "#FFFFFF",
+					"colorspace": "Gray"
 				}
 			},
 			{
@@ -143,7 +146,33 @@
 					"generation": "imagemagick",
 					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
 					"text2": "12.34.5678",
-					"textcolor": "#FFFFFF"
+					"textcolor": "#FFFFFF",
+					"colorspace": "Gray"
+				}
+			},
+			{
+				"key": "fotostreifen2",
+				"enabled": true,
+				"options": {
+					"allowed": true,
+					"dpi": 300,
+					"width": 1,
+					"height": 3,
+					"imageWidth": 868,
+					"imageHeight": 577,
+					"backgroundColor": "#9dad97",
+					"spacing": {
+						"top": 50,
+						"left": 0,
+						"bottom": 8,
+						"right": 1,
+						"betweenImages": 11
+					},
+					"generation": "imagemagick",
+					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
+					"text2": "12.34.5678",
+					"textcolor": "#FFFFFF",
+					"colorspace": "Gray"
 				}
 			}
 		]
