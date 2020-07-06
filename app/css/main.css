@@ -114,6 +114,7 @@ button {
 #collage .img-wrapper img {
     padding: 0.5vw;
     -webkit-filter: brightness(80%);
+    filter: brightness(80%);
 }
 
 #prompt {
@@ -228,7 +229,12 @@ button {
 }
 
 .mirror_live_view{
+    position: absolute; top: 0; bottom: 0; right: 0; left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
     -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 

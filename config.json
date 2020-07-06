@@ -179,16 +179,16 @@
 		]
 	},
 	"live": {
-		"enabled": false,
+		"enabled": true,
 		"mirror_live_view": true,
 		"framerate": 25
 	},
 	"branding": {
 		"type": "text",
-		"content": "<div style='font-size: 1.4em; padding-left: 25px;'><i class='fa fa-wifi' aria-hidden='true' style='font-size: 2.0em;'></i> <b style='font-size: 1.8em; padding-left: 15px;'>photo-booth</b><br /><p>Zum Drucken oder Bilder herunterladen das WLAN fotobox auswählen, und mit dem Browser die Seite <b style='padding: 0 5px;'>foto.box</b> aufrufen! </p></div>",
+		"content": "<div <p>Zum Drucken oder Bilder herunterladen das <b style='padding: 0 5px;'>WLAN 'FOTOBOX'</b> auswählen, und mit dem Browser die Seite <b style='padding: 0 5px;'>'http://foto.box'</b> aufrufen! </p></div>",
 		"position": "bottomleft"
 	},
 	"flash": {
-		"enabled": true
+		"enabled": false
 	}
 }
