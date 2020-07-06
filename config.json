@@ -1,10 +1,10 @@
 {
 	"language": "de",
 	"init": {
-		"fullscreen": false,
-		"width": 1440,
-		"height": 900,
-		"showDevTools": true,
+		"fullscreen": true,
+		"width": 1200,
+		"height": 800,
+		"showDevTools": false,
 		"useGPIO": false,
 		"grayscaleMode": false,
 		"preventScreensaver": true
@@ -13,7 +13,7 @@
 	"firstPhotoCountdownLength": "5",
 	"followingPhotosCountdownLength": "3",
 	"photoPreviewDuration": "8",
-	"photoSeriesLength": "3",
+	"photoSeriesLength": "1",
 	"slideshow": {
 		"enabled": true,
 		"activatesAfterSeconds": "30",
@@ -22,14 +22,15 @@
 	"gphoto2": {
 		"capturetarget": 1,
 		"keep": true,
-		"simulate": true
+		"simulate": false
 	},
 	"triggers": {
 		"onClick": true,
 		"customKeys": [
 			"PageUp",
 			"PageDown",
-			"b"
+			"ArrowUp",
+			"ArrowDown"
 		]
 	},
 	"content_dir": "../content",
@@ -176,6 +177,11 @@
 				}
 			}
 		]
+	},
+	"live": {
+		"enabled": false,
+		"mirror_live_view": true,
+		"framerate": 25
 	},
 	"branding": {
 		"type": "text",

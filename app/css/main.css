@@ -227,6 +227,10 @@ button {
     background-color: black;
 }
 
+.mirror_live_view{
+    -webkit-transform: scaleX(-1);
+}
+
 
 .fa {
 	font-size: 10vw;

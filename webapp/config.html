@@ -149,6 +149,18 @@
 				</div>
 			</div>
 
+			<div class="row">
+			    <div class="cell">Mirror the live view</div>
+			    <div class="cell">
+				    <div class="switch">
+						<label>
+							<input type="checkbox" id="mirror_live_view">
+							<span class="lever"></span>
+						</label>
+					</div>
+			    </div>
+			  </div>
+
 
 			<div class="row">
 				<div class="cell">
@@ -574,6 +586,7 @@
 				$('#photoPreviewDuration').val(config.photoPreviewDuration);
 				$('#firstPhotoCountdownLength').val(config.firstPhotoCountdownLength);
 				$('#followingPhotosCountdownLength').val(config.followingPhotosCountdownLength);
+				$('#mirror_live_view').prop('checked', config.live.mirror_live_view);
 
 				$('#slideshowEnabled').prop('checked', config.slideshow.enabled);
 				$('#slideshowActivatesAfterSeconds').val(config.slideshow.activatesAfterSeconds);
@@ -627,6 +640,7 @@
   			if (!option && config) {
 				config.maxImageSize = $('#maxImageSize').val();
 				config.gphoto2.keep = $('#keep').prop('checked');
+				config.live.mirror_live_view = $('#mirror_live_view').prop('checked');
 
 				config.photoSeriesLength = $('#photoSeriesLength').val();
 				config.photoPreviewDuration = $('#photoPreviewDuration').val();

@@ -51,8 +51,12 @@ camera.initialize(function( res, msg, err) {
     new CameraErrorOnStartupPrompt(-1).start(false, false);
   }
   let liveConfig = utils.getConfig().live;
-  if(liveConfig){
+  if(liveConfig.enabled){
     livePreview = new LivePreview(camera.camera, document.getElementById('live'), liveConfig.framerate);
+    
+    if(liveConfig.mirror_live_view){
+      document.getElementById('live').classList.add("mirror_live_view");
+    }
     livePreview.start()
   }
 });
