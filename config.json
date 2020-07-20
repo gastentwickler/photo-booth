@@ -9,10 +9,10 @@
 		"grayscaleMode": false,
 		"preventScreensaver": true
 	},
-	"maxImageSize": "1500",
+	"maxImageSize": "2000",
 	"firstPhotoCountdownLength": "5",
 	"followingPhotosCountdownLength": "3",
-	"photoPreviewDuration": "8",
+	"photoPreviewDuration": "5",
 	"photoSeriesLength": "1",
 	"slideshow": {
 		"enabled": true,
@@ -36,14 +36,14 @@
 	"content_dir": "../content",
 	"webapp": {
 		"password": "test",
-		"maxDownloadImageSize": 800,
+		"maxDownloadImageSize": 2000,
 		"gifDelay": 1000,
 		"enableRemoteRelease": true,
 		"contactAddressType": "none"
 	},
 	"printing": {
 		"enabled": true,
-		"simulate": true,
+		"simulate": false,
 		"printer": "Canon_SELPHY_CP1200",
 		"limitPerUser": 0,
 		"grayscale": false,
@@ -61,7 +61,7 @@
 					"height": 1,
 					"imageWidth": 868,
 					"imageHeight": 577,
-					"backgroundColor": "#afc9b8",
+					"backgroundColor": "#000000",
 					"spacing": {
 						"top": 50,
 						"left": 0,
@@ -70,10 +70,10 @@
 						"betweenImages": 11
 					},
 					"generation": "imagemagick",
-					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
-					"text2": "12.34.5678",
+					"text1": "PARTY HARD :-)",
+					"text2": "Juli 2020",
 					"textcolor": "#FFFFFF",
-					"colorspace": "Gray"
+					"colorspace": "RGB"
 				}
 			},
 			{
@@ -86,7 +86,7 @@
 					"height": 2,
 					"imageWidth": 868,
 					"imageHeight": 577,
-					"backgroundColor": "#c7d1d4",
+					"backgroundColor": "#000000",
 					"spacing": {
 						"top": 50,
 						"left": 0,
@@ -95,10 +95,10 @@
 						"betweenImages": 11
 					},
 					"generation": "imagemagick",
-					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
-					"text2": "12.34.5678",
+					"text1": "PARTY HARD :-)",
+					"text2": "Juli 2020",
 					"textcolor": "#FFFFFF",
-					"colorspace": "Gray"
+					"colorspace": "RGB"
 				}
 			},
 			{
@@ -111,7 +111,7 @@
 					"height": 2,
 					"imageWidth": 868,
 					"imageHeight": 577,
-					"backgroundColor": "#edc0c7",
+					"backgroundColor": "#000000",
 					"spacing": {
 						"top": 50,
 						"left": 0,
@@ -120,10 +120,10 @@
 						"betweenImages": 11
 					},
 					"generation": "imagemagick",
-					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
-					"text2": "12.34.5678",
+					"text1": "PARTY HARD :-)",
+					"text2": "Juli 2020",
 					"textcolor": "#FFFFFF",
-					"colorspace": "Gray"
+					"colorspace": "RGB"
 				}
 			},
 			{
@@ -136,7 +136,7 @@
 					"height": 3,
 					"imageWidth": 868,
 					"imageHeight": 577,
-					"backgroundColor": "#9dad97",
+					"backgroundColor": "#000000",
 					"spacing": {
 						"top": 50,
 						"left": 0,
@@ -145,10 +145,10 @@
 						"betweenImages": 11
 					},
 					"generation": "imagemagick",
-					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
-					"text2": "12.34.5678",
+					"text1": "PARTY HARD :-)",
+					"text2": "Juli 2020",
 					"textcolor": "#FFFFFF",
-					"colorspace": "Gray"
+					"colorspace": "RGB"
 				}
 			},
 			{
@@ -161,7 +161,7 @@
 					"height": 3,
 					"imageWidth": 868,
 					"imageHeight": 577,
-					"backgroundColor": "#9dad97",
+					"backgroundColor": "#000000",
 					"spacing": {
 						"top": 50,
 						"left": 0,
@@ -170,10 +170,10 @@
 						"betweenImages": 11
 					},
 					"generation": "imagemagick",
-					"text1": "Hallo Sonja!!!!!!!!!!!!!!!",
-					"text2": "12.34.5678",
+					"text1": "PARTY HARD :-)",
+					"text2": "Juli 2020",
 					"textcolor": "#FFFFFF",
-					"colorspace": "Gray"
+					"colorspace": "RGB"
 				}
 			}
 		]
