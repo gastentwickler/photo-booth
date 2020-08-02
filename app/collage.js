@@ -186,8 +186,8 @@ class Collage {
         //     im.convert(['-size', '1772x1181', 'xc:black', 
         //                 '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1658x1131+0+0', '\)', '-geometry', '+57+25', '-composite', 
         //                 '\(', images[0], '-resize', '1588x1058', '-crop', '1588x920+0+25', '\)', '-geometry', '+92+60', '-composite', 
-        //                 '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+460', 'Hochzeit Carmen & Mario', 
-        //                 '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+530', '28.09.2020', filePath], 
+        //                 '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+460', 'Hochzeit Carmen & Mario', 
+        //                 '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+530', '28.09.2020', filePath], 
                            
         //                  function(error, stdout){
         //                     if (error) {
@@ -205,8 +205,8 @@ class Collage {
                         '-fill', options.backgroundColor, '-stroke', 'white', '-draw', 'rectangle 57,25 1715,1156',
                     //  '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1658x1131+0+0', '\)', '-geometry', '+57+25', '-composite', 
                         '\(', images[0], '-resize', '1588x1058', '-crop', '1588x920+0+25', '\)', '-geometry', '+92+60', '-composite', 
-                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+460', options.text1, 
-                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+530', options.text2, 
+                        '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+460', options.text1, 
+                        '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+530', options.text2, 
                         '-colorspace', options.colorspace, 
                         filePath
                     ], 
@@ -227,8 +227,8 @@ class Collage {
                     //  '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1131x1658+0+0', '\)', '-geometry', '+25+57', '-composite', 
                         '\(', images[0], '-resize', '1051x700', '\)', '-geometry', '+65+97', '-composite', 
                         '\(', images[1], '-resize', '1051x700', '\)', '-geometry', '+65+837', '-composite', 
-                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+720', options.text1, 
-                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+790', options.text2, '-rotate', rotate, 
+                        '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+720', options.text1, 
+                        '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+790', options.text2, '-rotate', rotate, 
                         '-colorspace', options.colorspace, 
                         filePath
                     ], 
@@ -252,8 +252,8 @@ class Collage {
                         '\(', images[1], '-resize', '765x510', '-crop', '765x430+0+20', '\)', '-geometry', '+902+65', '-composite', 
                         '\(', images[2], '-resize', '765x510', '-crop', '765x430+0+20', '\)', '-geometry', '+97+535', '-composite', 
                         '\(', images[3], '-resize', '765x510', '-crop', '765x430+0+20', '\)', '-geometry', '+902+535', '-composite', 
-                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+445', options.text1, 
-                        '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+515', options.text2, 
+                        '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+445', options.text1, 
+                        '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+515', options.text2, 
                         '-colorspace', options.colorspace, 
                         filePath
                     ], 
@@ -279,10 +279,10 @@ class Collage {
             '\(', images[4], '-resize', '567x378', '-crop', '505x378+31+0', '\)', '-geometry', '+620+588', '-composite', 
             '\(', images[5], '-resize', '567x378', '-crop', '505x378+31+0', '\)', '-geometry', '+620+1026', '-composite', 
  
-            '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '-282+700', options.text1, 
-            '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '-282+760', options.text2, 
-            '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '+282+700', options.text1, 
-            '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '+282+760', options.text2, 
+            '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '-282+700', options.text1, 
+            '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '-282+760', options.text2, 
+            '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '+282+700', options.text1, 
+            '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '+282+760', options.text2, 
             '-colorspace', options.colorspace,
             '-rotate', rotate, filePath], 
 
@@ -300,7 +300,7 @@ class Collage {
                 console.log("fotostreifen2 collage erstellen");
     
                 im.convert(['-size', '1181x1772', 'xc:black', 
-                '-fill', options.backgroundColor, '-stroke', 'white', '-draw', 'rectangle 25,57 1156, 1715',
+                '-fill', options.backgroundColor, '-stroke', options.textcolor, '-draw', 'rectangle 25,57 1156, 1715',
             //  '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1131x1658+0+0', '\)', '-geometry', '+25+57', '-composite', 
                 '\(', images[0], '-resize', '567x378', '-crop', '505x378+31+0', '\)', '-geometry', '+55+150', '-composite',
                 '\(', images[1], '-resize', '567x378', '-crop', '505x378+31+0', '\)', '-geometry', '+55+588', '-composite', 
@@ -309,10 +309,10 @@ class Collage {
                 '\(', images[1], '-resize', '567x378', '-crop', '505x378+31+0', '\)', '-geometry', '+620+588', '-composite', 
                 '\(', images[2], '-resize', '567x378', '-crop', '505x378+31+0', '\)', '-geometry', '+620+1026', '-composite', 
      
-                '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '-282+700', options.text1, 
-                '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '-282+760', options.text2, 
-                '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '+282+700', options.text1, 
-                '-fill', 'white', '-stroke', 'white', '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '+282+760', options.text2,
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '-282+700', options.text1, 
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '-282+760', options.text2, 
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '+282+700', options.text1, 
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '+282+760', options.text2,
                 '-colorspace', options.colorspace, 
                 '-rotate', rotate, filePath], 
     
