@@ -242,7 +242,7 @@ class Collage {
 
         }
 
-        if (layout == '4erCollage') {
+/*         if (layout == '4erCollage') {
             console.log("4erCollage collage erstellen");
                
             im.convert(['-size', '1772x1181', 'xc:black', 
@@ -252,6 +252,31 @@ class Collage {
                         '\(', images[1], '-resize', '765x510', '-crop', '765x430+0+20', '\)', '-geometry', '+902+65', '-composite', 
                         '\(', images[2], '-resize', '765x510', '-crop', '765x430+0+20', '\)', '-geometry', '+97+535', '-composite', 
                         '\(', images[3], '-resize', '765x510', '-crop', '765x430+0+20', '\)', '-geometry', '+902+535', '-composite', 
+                        '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+445', options.text1, 
+                        '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+515', options.text2, 
+                        '-colorspace', options.colorspace, 
+                        filePath
+                    ], 
+               
+                         function(error, stdout){
+                            if (error) {
+                                callback(error);} 
+                            else {callback(false);}
+                          }
+                       );
+        } */
+
+
+        if (layout == '4erCollage') {
+            console.log("4erCollage collage erstellen");
+               
+            im.convert(['-size', '1772x1181', 'xc:black', 
+                        '-fill', options.backgroundColor, '-stroke', 'white', '-draw', 'rectangle 57,25 1715,1156',
+                    //  '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1658x1131+0+0', '\)', '-geometry', '+57+25', '-composite', 
+                        '\(', images[0], '-resize', '783x440', '-crop', '779x440+2+0', '\)', '-geometry', '+97+65', '-composite', 
+                        '\(', images[1], '-resize', '783x440', '-crop', '779x440+2+0', '\)', '-geometry', '+896+65', '-composite', 
+                        '\(', images[2], '-resize', '783x440', '-crop', '779x440+2+0', '\)', '-geometry', '+97+525', '-composite', 
+                        '\(', images[3], '-resize', '783x440', '-crop', '779x440+2+0', '\)', '-geometry', '+896+525', '-composite', 
                         '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+445', options.text1, 
                         '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+515', options.text2, 
                         '-colorspace', options.colorspace, 
