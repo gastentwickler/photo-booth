@@ -198,7 +198,7 @@ class Collage {
         // }
 
 
-        if (layout == 'PhotoFrame') {
+/*         if (layout == 'PhotoFrame') {
             console.log("PhotoFrame erstellen");
       
             im.convert(['-size', '1772x1181', 'xc:black', 
@@ -218,8 +218,31 @@ class Collage {
                           }
                        );
         }
-        
-        if (layout == '2erCollage') {
+ */        
+
+if (layout == 'PhotoFrame') {
+    console.log("PhotoFrame erstellen");
+
+    im.convert(['-size', '1772x1181', 'xc:black', 
+                '-fill', options.backgroundColor, '-stroke', 'white', '-draw', 'rectangle 57,25 1715,1156',
+            //  '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1658x1131+0+0', '\)', '-geometry', '+57+25', '-composite', 
+                '\(', images[0], '-resize', '1602x900', '-crop', '1578x900+12+0', '\)', '-geometry', '+97+65', '-composite', 
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+452', options.text1, 
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+522', options.text2, 
+                '-colorspace', options.colorspace, 
+                filePath
+            ], 
+                   
+                 function(error, stdout){
+                    if (error) {
+                        callback(error);} 
+                    else {callback(false);}
+                  }
+               );
+}
+
+
+/*         if (layout == '2erCollage') {
             console.log("2erCollage collage erstellen");
             
             im.convert(['-size', '1181x1772', 'xc:black', 
@@ -241,6 +264,32 @@ class Collage {
                        );
 
         }
+ */
+
+            if (layout == '2erCollage') {
+                console.log("2erCollage collage erstellen");
+                
+                im.convert(['-size', '1181x1772', 'xc:black', 
+                            '-fill', options.backgroundColor, '-stroke', 'white', '-draw', 'rectangle 25,57 1156, 1715',
+                        //  '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1131x1658+0+0', '\)', '-geometry', '+25+57', '-composite', 
+                            '\(', images[0], '-resize', '1246x700', '-crop', '1051x700+97+0','\)', '-geometry', '+65+97', '-composite', 
+                            '\(', images[1], '-resize', '1246x700', '-crop', '1051x700+97+0','\)', '-geometry', '+65+837', '-composite', 
+                            '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+720', options.text1, 
+                            '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+790', options.text2, '-rotate', rotate, 
+                            '-colorspace', options.colorspace, 
+                            filePath
+                        ], 
+                
+                            function(error, stdout){
+                                if (error) {
+                                    callback(error);} 
+                                else {callback(false);}
+                            }
+                        );
+
+            }
+
+
 
 /*         if (layout == '4erCollage') {
             console.log("4erCollage collage erstellen");
@@ -277,8 +326,8 @@ class Collage {
                         '\(', images[1], '-resize', '783x440', '-crop', '779x440+2+0', '\)', '-geometry', '+896+65', '-composite', 
                         '\(', images[2], '-resize', '783x440', '-crop', '779x440+2+0', '\)', '-geometry', '+97+525', '-composite', 
                         '\(', images[3], '-resize', '783x440', '-crop', '779x440+2+0', '\)', '-geometry', '+896+525', '-composite', 
-                        '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+445', options.text1, 
-                        '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+515', options.text2, 
+                        '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '70', '-gravity', 'center', '-annotate', '+0+452', options.text1, 
+                        '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '50', '-gravity', 'center', '-annotate', '+0+522', options.text2, 
                         '-colorspace', options.colorspace, 
                         filePath
                     ], 
@@ -291,7 +340,7 @@ class Collage {
                        );
         }
 
-        if (layout == 'fotostreifen') {
+/*         if (layout == 'fotostreifen') {
             console.log("fotostreifen collage erstellen");
 
             im.convert(['-size', '1181x1772', 'xc:black', 
@@ -318,10 +367,39 @@ class Collage {
               }
               );
             }
+ */
+            if (layout == 'fotostreifen') {
+                console.log("fotostreifen collage erstellen");
+    
+                im.convert(['-size', '1181x1772', 'xc:black', 
+                '-fill', options.backgroundColor, '-stroke', 'white', '-draw', 'rectangle 25,57 1156, 1715',
+            //  '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1131x1658+0+0', '\)', '-geometry', '+25+57', '-composite', 
+                '\(', images[0], '-resize', '673x378', '-crop', '505x378+82+0', '\)', '-geometry', '+55+150', '-composite',
+                '\(', images[1], '-resize', '673x378', '-crop', '505x378+82+0', '\)', '-geometry', '+55+588', '-composite', 
+                '\(', images[2], '-resize', '673x378', '-crop', '505x378+82+0', '\)', '-geometry', '+55+1026', '-composite', 
+                '\(', images[3], '-resize', '673x378', '-crop', '505x378+82+0', '\)', '-geometry', '+620+150', '-composite', 
+                '\(', images[4], '-resize', '673x378', '-crop', '505x378+82+0', '\)', '-geometry', '+620+588', '-composite', 
+                '\(', images[5], '-resize', '673x378', '-crop', '505x378+82+0', '\)', '-geometry', '+620+1026', '-composite', 
+     
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '-282+700', options.text1, 
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '-282+760', options.text2, 
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '+282+700', options.text1, 
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '+282+760', options.text2, 
+                '-colorspace', options.colorspace,
+                '-rotate', rotate, filePath], 
+    
+                 function(error, stdout){
+                    if (error) {
+                        callback(error);} 
+                    else {callback(false);}
+                  }
+                  );
+                }
+    
     
 
 
-            if (layout == 'fotostreifen2') {
+/*             if (layout == 'fotostreifen2') {
                 console.log("fotostreifen2 collage erstellen");
     
                 im.convert(['-size', '1181x1772', 'xc:black', 
@@ -348,8 +426,37 @@ class Collage {
                   }
                   );
                 }
-        
+ */        
     
+
+            if (layout == 'fotostreifen2') {
+                console.log("fotostreifen2 collage erstellen");
+
+                im.convert(['-size', '1181x1772', 'xc:black', 
+                '-fill', options.backgroundColor, '-stroke', options.textcolor, '-draw', 'rectangle 25,57 1156, 1715',
+            //  '\(', 'Folie2.JPG', '-resize', '3000x2000', '-crop', '1131x1658+0+0', '\)', '-geometry', '+25+57', '-composite', 
+            '\(', images[0], '-resize', '673x378', '-crop', '505x378+82+0', '\)', '-geometry', '+55+150', '-composite',
+            '\(', images[1], '-resize', '673x378', '-crop', '505x378+82+0', '\)', '-geometry', '+55+588', '-composite', 
+            '\(', images[2], '-resize', '673x378', '-crop', '505x378+82+0', '\)', '-geometry', '+55+1026', '-composite', 
+            '\(', images[0], '-resize', '673x378', '-crop', '505x378+82+0', '\)', '-geometry', '+620+150', '-composite', 
+            '\(', images[1], '-resize', '673x378', '-crop', '505x378+82+0', '\)', '-geometry', '+620+588', '-composite', 
+            '\(', images[2], '-resize', '673x378', '-crop', '505x378+82+0', '\)', '-geometry', '+620+1026', '-composite', 
+
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '-282+700', options.text1, 
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '-282+760', options.text2, 
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '40', '-gravity', 'center', '-annotate', '+282+700', options.text1, 
+                '-fill', options.textcolor, '-stroke', options.textcolor, '-font', 'Manjari-Thin', '-pointsize', '25', '-gravity', 'center', '-annotate', '+282+760', options.text2,
+                '-colorspace', options.colorspace, 
+                '-rotate', rotate, filePath], 
+
+                function(error, stdout){
+                    if (error) {
+                        callback(error);} 
+                    else {callback(false);}
+                }
+                );
+                }
+
     
             console.log("imagemagick ende filename:" + filePath);
 
